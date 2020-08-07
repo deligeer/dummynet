@@ -90,3 +90,4 @@ The commands to run (in separate windows) are the following
         # plain again with the firewall and enjoy
 	        ipfw/ipfw show  # or other# dummynet
 # dummynet
+# dummynet
