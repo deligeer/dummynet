@@ -4,9 +4,10 @@
 
 1. Install and boot FreeBSD
 2. Add the following lines to /etc/rc.conf:
+```
 firewall_enable="YES"
 firewall_type="OPEN"
-
+```
 Load dummynet with:
 
 kldload dummynet
@@ -35,9 +36,9 @@ ipfw add 1000 allow all from any to any
 ```
 ipfw add [N] [prob X] action PROTO from SRC to DST [options]
 ```
-where N is the rule number X is a number between 0 and 1 that, which indicates the probability of getting a match on this rule if all other fields are correct. 'action' is one of the actions executed on a match, which can be any of allow, deny, skipto N, pipe N and others.
-To send a packet to a dummynet pipe, we have to use pipe N; PROTO is the protocol type we want to match (IP, TCP, UDP, ...);
-SRC and DST are address specifier (we can use addresses with netmasks and optionally followed by ports or port ranges);
+where N is the rule number X is a number between 0 and 1 that, which indicates the **probability** of getting a match on this rule if all other fields are correct. 'action' is one of the actions executed on a match, which can be any of allow, deny, skipto N, pipe N and others.
+To send a packet to a dummynet pipe, we have to use pipe N; **PROTO** is the protocol type we want to match (IP, TCP, UDP, ...);
+**SRC** and **DST** are address specifier (we can use addresses with netmasks and optionally followed by ports or port ranges);
 options can be used to restrict the attention to packets coming from/to specific interfaces, or carrying some TCP flags or ICMP options, or bridged, etc.
 
 ## Creating and Destroying a single pipe:
@@ -48,7 +49,7 @@ To create a pipe (1) between larry and curly.
 ```
 ipfw add 100 pipe 1 ip from any to any
 ```
-	Note that this should come before allow/deny ipfw rules.
+Note that this should come before allow/deny ipfw rules.
 This command will create a single pipe on the network allowing full duplex data transfer between larry and curly.
 ```
 ipfw pipe 1 show
@@ -139,8 +140,7 @@ Given the right packet, the first rule will match with probability 1/3, of the r
 
 References:
 
-Dummynet: 
-[A simple approach to the evaluation of network protocols.](http://www.iet.unipi.it/~luigi/research.htmlhttp://www.iet.unipi.it/~luigi/research.html)
+Dummynet:[A simple approach to the evaluation of network protocols.](http://www.iet.unipi.it/~luigi/research.htmlhttp://www.iet.unipi.it/~luigi/research.html)
 
-[Dummynet home.](http://www.iet.unipi.it/~luigi/ip_dummynet/)
+Dummynet home:[Dummynet home.](http://www.iet.unipi.it/~luigi/ip_dummynet/)
 
