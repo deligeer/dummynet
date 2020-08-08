@@ -139,7 +139,8 @@ Given the right packet, the first rule will match with probability 1/3, of the r
 
 References:
 
-Dummynet: A simple approach to the evaluation of network protocols.(http://www.iet.unipi.it/~luigi/research.htmlhttp://www.iet.unipi.it/~luigi/research.html)
+Dummynet: 
+[A simple approach to the evaluation of network protocols.](http://www.iet.unipi.it/~luigi/research.htmlhttp://www.iet.unipi.it/~luigi/research.html)
 
-Dummynet home.(http://www.iet.unipi.it/~luigi/ip_dummynet/)
+[Dummynet home.](http://www.iet.unipi.it/~luigi/ip_dummynet/)
 
