@@ -10,7 +10,7 @@ Viewed 723 times
 
 
 I have a doubt respect to the functionality of the IPFW firewall in FreeBSD. My scenario is the following: 
-[<img src="./img/YZaFf.png">]
+<img src="./img/YZaFf.png">
 enter image description here
 
 All these machines are running FreeBSD, and all of them are virtual machines. The thing is that I don't understand one thing. If I add a rule in IPFW in the firewall machine to block pings from machine 2 to machine 1, I don't know why this block is bidirectional. I mean, I put this rule:
